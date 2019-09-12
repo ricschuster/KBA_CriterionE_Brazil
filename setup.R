@@ -4,6 +4,7 @@ library(fasterize)
 library(prioritizr)
 library(doParallel)
 library(tidyverse)
+library(lwgeom)
 
 setwd("D:/Work/KBAs/Crit_E/KBA_CriterionE_Brazil")
 library(here)
@@ -13,37 +14,78 @@ n_cores <- 12
 cl <- makeCluster(n_cores)
 registerDoParallel(cl)
 
-grd <- st_read(here("grid/Squares_250km_red_Lines.shp"))
-proja <- crs(grd)
+trm <- raster("D:/Work/IUCN/BiodiversityMapping_TIFFs_2019_03d14/Amphibians/Richness_10km_AMPHIBIANS_dec2017_spp_edited_extant_1m_EckertIV_dissolved_Anura_raster.tif")
+base_rast <- raster(trm) 
+proja <- crs(base_rast)
 
+
+# grd <- st_read(here("grid/Squares_250km_red_Lines.shp"))
+# grd <- st_transform(grd, proja)
+# proja <- crs(grd)
 
 land <- readRDS(here("grid/gadm36_BRA_0_sf.rds"))
-land <- st_transform(land, crs(grd))
+land <- st_transform(land, proja)
 
-base_rast <- raster(ext = extent(grd), res = 10000, crs = crs(grd))
+base_rast <- crop(base_rast, land)
 
 cost <- fasterize(land, base_rast)
 
-setwd("data/")
+# local files
+# setwd("data/")
+# 
+# 
+# fls <- list.files(pattern = ".shp$")
+# ll <- list()
+# jj <- 1
+# 
+# for(ii in 1:length(fls)){
+#   tmp_poly <- st_read(fls[ii]) %>% st_make_valid()
+#   tmp_rast <-  try(fasterize(tmp_poly, base_rast))
+#   
+#   if(class(tmp_rast) == "RasterLayer" & !all(is.na(tmp_rast[]))){
+#     ll[[jj]] <- tmp_rast
+#     jj <- jj + 1
+#   }
+#   
+#   rm(tmp_poly, tmp_rast)
+# }
+# 
+# biod <- stack(ll)
 
+#global IUCN files
+setwd("D:/Work/IUCN/IUCN_processing/IUCN")
+basewd <- setwd("Mamm/")
 
-fls <- list.files(pattern = ".shp$")
+fls <- list.files(pattern = ".tif$")
 ll <- list()
 jj <- 1
 
 for(ii in 1:length(fls)){
-  tmp_poly <- st_read(fls[ii])
-  tmp_rast <-  fasterize(tmp_poly, base_rast)
+  tmp_rast <-  try(raster(fls[ii]) %>% crop(base_rast))
   
-  if(any(!is.na(tmp_rast[]))){
-    ll[[jj]] <- tmp_rast
-    jj <- jj + 1
+  if(class(tmp_rast) == "RasterLayer" & !all(is.na(values(tmp_rast)))){
+    
+    tmp.df <- data.frame(cost = values(cost),
+                         val = values(tmp_rast))
+    tmp.df.red <- tmp.df %>% filter(!is.na(cost))
+    
+    if(sum(tmp.df.red$val, na.rm = TRUE) >= 10){
+      ll[[jj]] <- tmp_rast
+      jj <- jj + 1
+    }
+    rm(tmp.df, tmp.df.red)
   }
   
-  rm(tmp_poly, tmp_rast)
+  if(!(ii %% 50)){
+    print(ii)
+    flush.console()
+  }
+  rm(tmp_rast)
 }
 
 biod <- stack(ll)
+
+
 
 pu <- data.frame(id = 1:ncell(cost),
                  cost = cost[],
@@ -55,11 +97,12 @@ spec <- data.frame(id = 1:nlayers(biod),
 biod_df <- as.data.frame(biod)
 tmp <- as_tibble(data.frame(pu$id, biod_df))
 names(tmp)[1] <- "pu"
+names(tmp)[-1] <- spec$id
 
 rij_raw <- tmp %>% gather( "species", "amount", -pu)
 rij <- rij_raw %>% filter(!is.na(amount) & amount > 0) 
 
-rij$species <- as.integer(gsub("layer.", "", rij$species))
+rij$species <- as.integer(rij$species)
 
 rij <- rij %>% arrange(pu, species)
 
