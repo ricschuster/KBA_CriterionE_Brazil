@@ -11,6 +11,7 @@ library(here)
 
 trm <- raster("D:/Work/IUCN/BiodiversityMapping_TIFFs_2019_03d14/Amphibians/Richness_10km_AMPHIBIANS_dec2017_spp_edited_extant_1m_EckertIV_dissolved_Anura_raster.tif")
 base_rast <- raster(trm) 
+# res(base_rast) <- 10000
 proja <- crs(base_rast)
 
 
@@ -97,6 +98,46 @@ ll_red <- ll[(1:nrow(spp_df))[spp_df$perc_aoi > perc_threashold]]
 spp_df_red <- spp_df[spp_df$perc_aoi > perc_threashold, ]
 biod <- stack(ll_red)
 
+save.image(here("data_processed.RData"))
+
+
+#######
+## generating and solving the problem
+#######
+
+# parallelization
+n_cores <- 12
+cl <- makeCluster(n_cores)
+registerDoParallel(cl)
+
+p1 <- problem(cost, biod) %>%
+  add_min_set_objective() %>%
+  add_relative_targets(0.2) %>%
+  # add_binary_decisions() %>%
+  add_proportion_decisions() %>%
+  add_default_solver(gap = 0.0)
+
+# solve problem
+s1 <- solve(p1)
+plot(s1)
+
+#cuts_portfolio
+p2 <- p1 %>%
+  add_cuts_portfolio(100)
+s2 <- solve(p2)
+
+plot(sum(stack(s2)))
+
+
+#pool_portfolio
+p3 <- p1 %>%
+  add_pool_portfolio(method = 2, number_solutions = 100)
+s3 <- solve(p3)
+
+plot(sum(stack(s3)))
+
+
+
 
 
 pu <- data.frame(id = 1:ncell(cost),
@@ -117,12 +158,6 @@ rij <- rij_raw %>% filter(!is.na(amount) & amount > 0)
 rij$species <- as.integer(rij$species)
 
 rij <- rij %>% arrange(pu, species)
-
-# parallelization
-n_cores <- 12
-cl <- makeCluster(n_cores)
-registerDoParallel(cl)
-
 
 p1 <- problem(pu, cost_column = "cost", features = spec, rij = rij) %>%
   add_min_set_objective() %>%
