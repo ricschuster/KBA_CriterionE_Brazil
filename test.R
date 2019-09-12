@@ -95,6 +95,9 @@ p1 <- problem(cost, biod) %>%
 
 # solve problem
 s1 <- solve(p1)
+# Error in .local(a, b, ...) : 
+#   no solution found (e.g. due to problem infeasibility or time limits)
+
 plot(s1)
 
 ####################################################
