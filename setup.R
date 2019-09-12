@@ -113,13 +113,51 @@ registerDoParallel(cl)
 p1 <- problem(cost, biod) %>%
   add_min_set_objective() %>%
   add_relative_targets(0.2) %>%
-  # add_binary_decisions() %>%
-  add_proportion_decisions() %>%
+  add_binary_decisions() %>%
+  # add_proportion_decisions() %>%
   add_default_solver(gap = 0.0)
 
 # solve problem
 s1 <- solve(p1)
 plot(s1)
+
+pu <- data.frame(id = 1:ncell(cost),
+                 cost = cost[],
+                 status = 0L)
+
+spec <- data.frame(id = 1:nlayers(biod),
+                   name = names(biod),
+                   stringsAsFactors = FALSE)
+biod_df <- as.data.frame(biod)
+tmp <- as_tibble(data.frame(pu$id, biod_df))
+names(tmp)[1] <- "pu"
+names(tmp)[-1] <- spec$id
+
+#remove all rows from features with no associated cost value
+#obsolete with previous filter in IUCN process loop
+tmp_red <- tmp[!is.na(pu$cost),]
+
+rij_raw <- tmp_red %>% gather( "species", "amount", -pu)
+rij <- rij_raw %>% filter(!is.na(amount) & amount > 0) 
+
+rij$species <- as.integer(rij$species)
+
+rij <- rij %>% arrange(pu, species)
+
+p1 <- problem(pu, cost_column = "cost", features = spec, rij = rij) %>%
+  add_min_set_objective() %>%
+  add_relative_targets(0.2) %>%
+  add_binary_decisions() %>%
+  # add_proportion_decisions() %>%
+  add_default_solver(gap = 0.0)
+
+# solve problem
+s1 <- solve(p1)
+# plot(s1)
+rs1 <- cost
+rs1[] <- s1$solution_1
+plot(rs1)
+
 
 #cuts_portfolio
 p2 <- p1 %>%
@@ -137,44 +175,22 @@ s3 <- solve(p3)
 plot(sum(stack(s3)))
 
 
+#shuffle_portfolio
+p4 <- p1 %>%
+  add_shuffle_portfolio(number_solutions = 100, threads = n_cores - 4)
+s4 <- solve(p4)
 
+rs4 <- cost
+rs4[] <- rowSums(s4[,4:103], na.rm = TRUE)
+plot(rs4)
 
+names(s4[,4:ncol(s4)])
 
-pu <- data.frame(id = 1:ncell(cost),
-                 cost = cost[],
-                 status = 0L)
-
-spec <- data.frame(id = 1:nlayers(biod),
-                   name = names(biod),
-                   stringsAsFactors = FALSE)
-biod_df <- as.data.frame(biod)
-tmp <- as_tibble(data.frame(pu$id, biod_df))
-names(tmp)[1] <- "pu"
-names(tmp)[-1] <- spec$id
-
-rij_raw <- tmp %>% gather( "species", "amount", -pu)
-rij <- rij_raw %>% filter(!is.na(amount) & amount > 0) 
-
-rij$species <- as.integer(rij$species)
-
-rij <- rij %>% arrange(pu, species)
-
-p1 <- problem(pu, cost_column = "cost", features = spec, rij = rij) %>%
-  add_min_set_objective() %>%
-  add_relative_targets(0.3) %>%
-  # add_binary_decisions() %>%
-  add_proportion_decisions() %>%
-  add_default_solver(gap = 0.001)
-
-# solve problem
-s1 <- solve(p1)
-# plot(s1)
-
-rc1 <- replacement_cost(p1, data.frame(s1$solution_1), threads = n_cores)
+rc1 <- replacement_cost(p1, data.frame(s1$solution_1), threads = n_cores - 2)
 
 rw1 <- rarity_weighted_richness(p1, data.frame(s1$solution_1))
 
-save.image("D:/Work/KBAs/Crit_E/KBA_CriterionE_Canada/tmp.RData")
+save.image("D:/Work/KBAs/Crit_E/KBA_CriterionE_Canada/portfolio_irreplaceability.RData")
 
 rw1.r <- rc1.r <- s1.r <- cost
 rc1.r[] <- rc1$rc
