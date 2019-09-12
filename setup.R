@@ -80,14 +80,14 @@ for(ii in 1:length(fls)){
       ll[[jj]] <- tmp_rast
       jj <- jj + 1
     }
-    rm(tmp.df, tmp.df.red)
+    rm(spp_cnt, tmp_red_cnt)
   }
   
   if(!(ii %% 50)){
     print(ii)
     flush.console()
   }
-  rm(tmp_rast)
+  rm(tmp_rast, spp_rast)
 }
 
 spp_df[,-1] <- sapply(spp_df[,-1], as.numeric)
