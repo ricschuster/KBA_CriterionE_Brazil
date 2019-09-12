@@ -9,11 +9,6 @@ library(lwgeom)
 setwd("D:/Work/KBAs/Crit_E/KBA_CriterionE_Brazil")
 library(here)
 
-# parallelization
-n_cores <- 12
-cl <- makeCluster(n_cores)
-registerDoParallel(cl)
-
 trm <- raster("D:/Work/IUCN/BiodiversityMapping_TIFFs_2019_03d14/Amphibians/Richness_10km_AMPHIBIANS_dec2017_spp_edited_extant_1m_EckertIV_dissolved_Anura_raster.tif")
 base_rast <- raster(trm) 
 proja <- crs(base_rast)
@@ -56,20 +51,32 @@ cost <- fasterize(land, base_rast)
 setwd("D:/Work/IUCN/IUCN_processing/IUCN")
 basewd <- setwd("Mamm/")
 
+
 fls <- list.files(pattern = ".tif$")
 ll <- list()
 jj <- 1
+spp_df <- tibble(name = character(),
+                 global_range = integer(),
+                 local_range = integer(),
+                 perc_aoi = numeric()
+                 )
 
 for(ii in 1:length(fls)){
-  tmp_rast <-  try(raster(fls[ii]) %>% crop(base_rast))
+  spp_rast <-  raster(fls[ii]) 
+  tmp_rast <- spp_rast %>% crop(base_rast)
   
   if(class(tmp_rast) == "RasterLayer" & !all(is.na(values(tmp_rast)))){
+
+    tmp_rast_val <- values(tmp_rast)
+    tmp_rast_val[is.na(cost[])] <- NA
+    tmp_rast[] <- tmp_rast_val
     
-    tmp.df <- data.frame(cost = values(cost),
-                         val = values(tmp_rast))
-    tmp.df.red <- tmp.df %>% filter(!is.na(cost))
-    
-    if(sum(tmp.df.red$val, na.rm = TRUE) >= 10){
+    if(!all(is.na(tmp_rast_val))){
+      spp_cnt <- sum(values(spp_rast), na.rm = TRUE)
+      
+      tmp_red_cnt <- sum(values(tmp_rast), na.rm = TRUE)
+      
+      spp_df[jj,] <- c(names(spp_rast), spp_cnt, tmp_red_cnt, tmp_red_cnt / spp_cnt * 100)
       ll[[jj]] <- tmp_rast
       jj <- jj + 1
     }
@@ -83,7 +90,12 @@ for(ii in 1:length(fls)){
   rm(tmp_rast)
 }
 
-biod <- stack(ll)
+spp_df[,-1] <- sapply(spp_df[,-1], as.numeric)
+
+perc_threashold <- 50
+ll_red <- ll[(1:nrow(spp_df))[spp_df$perc_aoi > perc_threashold]]
+spp_df_red <- spp_df[spp_df$perc_aoi > perc_threashold, ]
+biod <- stack(ll_red)
 
 
 
@@ -105,6 +117,11 @@ rij <- rij_raw %>% filter(!is.na(amount) & amount > 0)
 rij$species <- as.integer(rij$species)
 
 rij <- rij %>% arrange(pu, species)
+
+# parallelization
+n_cores <- 12
+cl <- makeCluster(n_cores)
+registerDoParallel(cl)
 
 
 p1 <- problem(pu, cost_column = "cost", features = spec, rij = rij) %>%
