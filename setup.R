@@ -110,6 +110,16 @@ n_cores <- 12
 cl <- makeCluster(n_cores)
 registerDoParallel(cl)
 
+#Targets setup
+#base value of 10%
+spp_df_red$targets <- 0.1
+#species with up to 1000km2 global range get target to 100%
+spp_df_red$targets[spp_df_red$global_range <= 10] <- 1
+# at least 1000km2 globally (need to adjust local proportion by perc_aoi)
+
+
+
+
 p1 <- problem(cost, biod) %>%
   add_min_set_objective() %>%
   add_relative_targets(0.2) %>%
