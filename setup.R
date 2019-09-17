@@ -190,7 +190,7 @@ rc1 <- replacement_cost(p1, data.frame(s1$solution_1), threads = n_cores - 2)
 
 rw1 <- rarity_weighted_richness(p1, data.frame(s1$solution_1))
 
-save.image("D:/Work/KBAs/Crit_E/KBA_CriterionE_Canada/portfolio_irreplaceability.RData")
+save.image(here("portfolio_irreplaceability.RData"))
 
 rw1.r <- rc1.r <- s1.r <- cost
 rc1.r[] <- rc1$rc
