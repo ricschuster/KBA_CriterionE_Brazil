@@ -284,8 +284,15 @@ rw.t1 <- rarity_weighted_richness(pt, data.frame(st$solution_1))
 save.image(here("portfolio_irreplaceability_Targets.RData"))
 
 rc.t1[rc.t1 > 100] <- 1.09
+r.rc.t1 <- cost
+r.rc.t1[] <- rc.t1$rc
+plot(r.rc.t1)
 
-rrT <- stack(st, stack(st2), sum(stack(st3)), sum(stack(st4)), rc.t1, rw.t1)
+r.rw.t1 <- cost
+r.rw.t1[] <- rw.t1$rwr
+plot(r.rw.t1)
+
+rrT <- stack(rst, rt2, rt3, rt4, r.rc.t1, r.rw.t1)
 names(rrT) <- c("solution", "cuts portfolio (only 1 layer)", "pool portfolio", "shuffle portfolio",
                 "raplecement cost", "rarity weighted rich")
 
