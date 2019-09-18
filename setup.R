@@ -217,6 +217,88 @@ writeRaster(s1.r, here("/output/s1.tif"), format="GTiff", overwrite = TRUE)
 # set infinite values as 1.09 so we can plot them
 rc$rc[rc$rc > 100] <- 1.09
 
+
+
+#Targets setup
+#base value of 10% global (need to adjust local proportion by perc_aoi)
+spp_df_red$targets <- 0.1 * spp_df_red$perc_aoi / 100
+
+# at least 1000km2 globally (need to adjust local proportion by perc_aoi)
+spp_df_red$targets <- ifelse(spp_df_red$global_range * 0.1 <= 10, 
+                             10 / spp_df_red$global_range * spp_df_red$perc_aoi / 100, 
+                             spp_df_red$targets) 
+
+
+#species with up to 1000km2 global range get target to 100%
+spp_df_red$targets[spp_df_red$global_range <= 10] <- 1
+
+
+
+pt <- problem(pu, cost_column = "cost", features = spec, rij = rij) %>%
+  add_min_set_objective() %>%
+  add_relative_targets(spp_df_red$targets) %>%
+  add_binary_decisions() %>%
+  # add_proportion_decisions() %>%
+  add_default_solver(gap = 0.0)
+
+# solve problem
+st <- solve(pt)
+
+rst <- cost
+rst[] <- st$solution_1
+plot(rst)
+
+
+#cuts_portfolio
+pt2 <- pt %>%
+  add_cuts_portfolio(100)
+st2 <- solve(pt2)
+
+rt2 <- cost
+rt2[] <- rowSums(st2[,4:103], na.rm = TRUE)
+plot(rt2)
+
+
+#pool_portfolio
+pt3 <- pt %>%
+  add_pool_portfolio(method = 2, number_solutions = 100)
+st3 <- solve(pt3)
+
+rt3 <- cost
+rt3[] <- rowSums(st3[,4:103], na.rm = TRUE)
+plot(rt3)
+
+#shuffle_portfolio
+pt4 <- pt %>%
+  add_shuffle_portfolio(number_solutions = 100, threads = n_cores - 4)
+st4 <- solve(pt4)
+
+rt4 <- cost
+rt4[] <- rowSums(st4[,4:103], na.rm = TRUE)
+plot(rt4)
+
+rc.t1 <- replacement_cost(pt, data.frame(st$solution_1), threads = n_cores - 2)
+
+rw.t1 <- rarity_weighted_richness(pt, data.frame(st$solution_1))
+
+save.image(here("portfolio_irreplaceability_Targets.RData"))
+
+rc.t1[rc.t1 > 100] <- 1.09
+
+rrT <- stack(st, stack(st2), sum(stack(st3)), sum(stack(st4)), rc.t1, rw.t1)
+names(rrT) <- c("solution", "cuts portfolio (only 1 layer)", "pool portfolio", "shuffle portfolio",
+                "raplecement cost", "rarity weighted rich")
+
+plot(rrT)
+
+writeRaster(rw.t1, here("/output/Targets_rw1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(rc.t1, here("/output/Targets_rc1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(st, here("/output/Targets_s1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(stack(st2), here("/output/Targets_s1_cuts.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(sum(stack(st3)), here("/output/Targets_s1_pool.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(sum(stack(st4)), here("/output/Targets_s1_shuffle.tif"), format="GTiff", overwrite = TRUE)
+
+
 # plot the irreplaceability scores
 # planning units that are replaceable are shown in purple, blue, green, and
 # yellow, and planning units that are truly irreplaceable are shown in red
