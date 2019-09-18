@@ -298,12 +298,12 @@ names(rrT) <- c("solution", "cuts portfolio (only 1 layer)", "pool portfolio", "
 
 plot(rrT)
 
-writeRaster(rw.t1, here("/output/Targets_rw1.tif"), format="GTiff", overwrite = TRUE)
-writeRaster(rc.t1, here("/output/Targets_rc1.tif"), format="GTiff", overwrite = TRUE)
-writeRaster(st, here("/output/Targets_s1.tif"), format="GTiff", overwrite = TRUE)
-writeRaster(stack(st2), here("/output/Targets_s1_cuts.tif"), format="GTiff", overwrite = TRUE)
-writeRaster(sum(stack(st3)), here("/output/Targets_s1_pool.tif"), format="GTiff", overwrite = TRUE)
-writeRaster(sum(stack(st4)), here("/output/Targets_s1_shuffle.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(r.rw.t1, here("/output/Targets_rw1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(r.rc.t1, here("/output/Targets_rc1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(rst, here("/output/Targets_s1.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(rt2, here("/output/Targets_s1_cuts.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(rt3, here("/output/Targets_s1_pool.tif"), format="GTiff", overwrite = TRUE)
+writeRaster(rt4, here("/output/Targets_s1_shuffle.tif"), format="GTiff", overwrite = TRUE)
 
 
 # plot the irreplaceability scores
