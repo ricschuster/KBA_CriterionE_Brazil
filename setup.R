@@ -315,10 +315,10 @@ save.image(here("portfolio_irreplaceability_Targets.RData"))
 
 # Marxan
 marxan_runs <- expand.grid(
-  marxan_iterations = 1e6,
+  marxan_iterations = 1e8,
   spf = 10
 )
-marxan_reps <- 10
+marxan_reps <- 100
 
 
 bnd_mat <- boundary_matrix(cost)
