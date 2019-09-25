@@ -306,29 +306,145 @@ writeRaster(rt3, here("/output/Targets_s1_pool.tif"), format="GTiff", overwrite 
 writeRaster(rt4, here("/output/Targets_s1_shuffle.tif"), format="GTiff", overwrite = TRUE)
 
 
-# plot the irreplaceability scores
-# planning units that are replaceable are shown in purple, blue, green, and
-# yellow, and planning units that are truly irreplaceable are shown in red
-spplot(rc1.r, "layer", main = "Irreplaceability", #xlim = c(-0.1, 1.1),
-       #ylim = c(-0.1, 1.1), 
-       at = c(seq(0, 0.9, 0.1), 1.01, 1.1),
-       col.regions = c("#440154", "#482878", "#3E4A89", "#31688E", "#26828E",
-                       "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725",
-                       "#FF0000"))
-spplot(rw1.r, "layer", main = "Irreplaceability", #xlim = c(-0.1, 1.1),
-       #ylim = c(-0.1, 1.1), 
-       at = c(seq(0, 0.9, 0.1), 1.01, 1.1),
-       col.regions = c("#440154", "#482878", "#3E4A89", "#31688E", "#26828E",
-                       "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725",
-                       "#FF0000"))
-
-spplot(s1.r, "layer", main = "Irreplaceability", #xlim = c(-0.1, 1.1),
-       #ylim = c(-0.1, 1.1), 
-       at = c(seq(0, 0.9, 0.1), 1.01, 1.1),
-       col.regions = c("#440154", "#482878", "#3E4A89", "#31688E", "#26828E",
-                       "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725",
-                       "#FF0000"))
-
 # clean up
 stopCluster(cl)
 
+
+
+# Marxan
+marxan_runs <- expand.grid(
+  marxan_iterations = 1e7,
+  spf = 10
+)
+marxan_reps <- 100
+
+
+bnd_mat <- boundary_matrix(cost)
+smm_mat <- summary(bnd_mat)
+# df <- as.data.frame(as.matrix(bnd_mat))
+
+bnd_df <- data.frame(id1 = smm_mat$i,
+                     id2 = smm_mat$j,
+                     boundary = round(smm_mat$x,0))
+
+
+
+sysname <- tolower(Sys.info()[["sysname"]])
+marxan_path <- switch(sysname, 
+                      windows = here("marxan", "Marxan_x64.exe"), 
+                      darwin = here("marxan", "MarOpt_v243_Mac64"), 
+                      linux = here("marxan", "MarOpt_v243_Linux64")
+)
+stopifnot(file.exists(marxan_path))
+
+marxan_dir <- here("output", "marxan")
+runs_dir <- here("output", "runs")
+
+
+# set infinite values as 1.09 so we can plot them
+
+pu <- data.frame(id = 1:ncell(cost),
+                 cost = cost[],
+                 status = 0L)
+
+
+spec <- data.frame(id = 1:nlayers(biod),
+                   target = 0.0, 
+                   spf = marxan_runs$spf, 
+                   name = names(biod),
+                   stringsAsFactors = FALSE)
+
+biod_df <- as.data.frame(biod)
+tmp <- as_tibble(data.frame(pu$id, biod_df))
+names(tmp)[1] <- "pu"
+names(tmp)[-1] <- spec$id
+
+#remove all rows from features with no associated cost value
+#obsolete with previous filter in IUCN process loop
+tmp_red <- tmp[!is.na(pu$cost),]
+pu_red <- pu[!is.na(pu$cost),]
+
+spec$target <- ceiling(spp_df_red$targets * colSums(tmp_red[,-1], na.rm = TRUE))
+
+
+rij_raw <- tmp_red %>% gather( "species", "amount", -pu)
+rij <- rij_raw %>% filter(!is.na(amount) & amount > 0) 
+
+rij$species <- as.integer(rij$species)
+
+rij <- rij %>% arrange(pu, species)
+rij <- rij[,c("species", "pu", "amount")]
+
+# puvspr_data <- rij_matrix(cost, biod)
+# puvspr_data <- as(puvspr_data, "dgTMatrix")
+# puvspr_data <- data.frame(pu = puvspr_data@j + 1, species = puvspr_data@i + 1,
+#                           amount = puvspr_data@x)
+# 
+# # print first six rows
+# head(puvspr_data)
+
+# puvspecies <- data.frame(species = rep(1:nlayers(biod),1, each = ncell(cost)),
+#                          pu = rep(1:ncell(cost), nlayers(biod)),
+#                          amount = as.numeric(unlist(as.data.frame(biod))),
+#                          stringsAsFactors = FALSE)
+# puvspecies <- puvspecies[order(puvspecies$pu, puvspecies$species),]
+# puvspecies <- puvspecies[puvspecies$amount > 0, ]
+
+m_data <- MarxanData(pu = pu_red,
+                     species = spec,
+                     puvspecies = as.data.frame(rij), 
+                     boundary = bnd_df) #, skipchecks = TRUE)
+
+# options
+m_opts <- MarxanOpts(BLM = 0.0, NCORES = 1L, VERBOSITY = 3L)
+m_opts@NUMREPS <- as.integer(marxan_reps)
+m_opts@NUMITNS <- as.integer(marxan_runs$marxan_iterations)
+m_opts@NUMTEMP <- as.integer(ceiling(m_opts@NUMITNS * 0.2))
+m_unsolved <- MarxanUnsolved(opts = m_opts, data = m_data)
+
+# solve
+td <- file.path(tempdir(), paste0("marxan-run_", UUIDgenerate()))
+dir.create(td, recursive = TRUE, showWarnings = FALSE)
+write.MarxanUnsolved(m_unsolved, td)
+file.copy(marxan_path, td)
+system(paste0("chmod +x ", file.path(td, basename(marxan_path))))
+setwd(td)
+m_time <- system.time(system2(marxan_path, args = c("input.dat", "-s")))
+
+#read and copy results
+m_results <- safely(read.MarxanResults)(td)$result
+setwd(here())
+svfld <- here("output", "runs", "marxan_target_files")
+dir.create(svfld, recursive = TRUE, showWarnings = FALSE)
+fls    <- list.files(path = td, full.names = TRUE, recursive = TRUE)
+for (f in fls) file.copy(from = f, to = svfld)
+unlink(td, recursive = TRUE)
+
+# save
+if (!is.null(m_results)) {
+  "marxan_target_summary.csv" %>%
+    file.path(marxan_dir, .) %>%
+    write_csv(m_results@summary, .)
+  
+  tmp_r <- cost
+  tmp_df_red <- pu_red
+  tmp_df_red$sel <- as.vector(colSums(m_results@selections))
+  tmp_df <- data.frame(id = pu[,1])
+  tmp_df <- left_join(tmp_df, tmp_df_red, by = "id")
+  tmp_r[] <- tmp_df$sel
+  
+  tmp_r <- "marxan_target_selection_frequency.tif" %>%
+    file.path(marxan_dir, .) %>%
+    writeRaster(tmp_r, overwrite = TRUE, .)
+}
+
+
+
+
+rrT2 <- stack(tmp_r, st, sum(stack(st3)), sum(stack(st4)), rc.t1, rw.t1)
+names(rrT2) <- c("Marxan", "solution", "pool portfolio", "shuffle portfolio",
+                 "raplecement cost", "rarity weighted rich")
+
+plot(rrT2)
+
+save.image(here("portfolio_irreplaceability_Targets_Marxan.RData"))
