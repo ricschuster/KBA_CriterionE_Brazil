@@ -5,6 +5,8 @@ library(prioritizr)
 library(doParallel)
 library(tidyverse)
 library(lwgeom)
+library(uuid)
+library(marxan)
 
 setwd("D:/Work/KBAs/Crit_E/KBA_CriterionE_Brazil")
 library(here)
@@ -281,8 +283,6 @@ rc.t1 <- replacement_cost(pt, data.frame(st$solution_1), threads = n_cores - 2)
 
 rw.t1 <- rarity_weighted_richness(pt, data.frame(st$solution_1))
 
-save.image(here("portfolio_irreplaceability_Targets.RData"))
-
 rc.t1[rc.t1 > 100] <- 1.09
 r.rc.t1 <- cost
 r.rc.t1[] <- rc.t1$rc
@@ -309,14 +309,16 @@ writeRaster(rt4, here("/output/Targets_s1_shuffle.tif"), format="GTiff", overwri
 # clean up
 stopCluster(cl)
 
+save.image(here("portfolio_irreplaceability_Targets.RData"))
+
 
 
 # Marxan
 marxan_runs <- expand.grid(
-  marxan_iterations = 1e7,
+  marxan_iterations = 1e6,
   spf = 10
 )
-marxan_reps <- 100
+marxan_reps <- 10
 
 
 bnd_mat <- boundary_matrix(cost)
@@ -441,7 +443,7 @@ if (!is.null(m_results)) {
 
 
 
-rrT2 <- stack(tmp_r, st, sum(stack(st3)), sum(stack(st4)), rc.t1, rw.t1)
+rrT2 <- stack(tmp_r, rst, rt3, rt4,r.rc.t1, r.rw.t1)
 names(rrT2) <- c("Marxan", "solution", "pool portfolio", "shuffle portfolio",
                  "raplecement cost", "rarity weighted rich")
 
