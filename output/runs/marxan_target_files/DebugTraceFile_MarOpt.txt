@@ -1,0 +1,1149 @@
+Marxan v 2.43 begin execution
+
+LoadOptions
+RandSeed iseed 4794 RandSeed1 -4794
+before LoadPUData
+after LoadPUData
+prob field not present
+before LoadSpeciesData
+after LoadSpeciesData
+before build search arrays
+after build search arrays
+before ReadConnections
+after ReadConnections
+before LoadSparseMatrix
+after LoadSparseMatrix
+Prob2D is off
+before LoadSparseMatrix_sporder
+after LoadSparseMatrix_sporder
+before process block definitions
+after process block definitions
+before CalcTotalAreas
+after CalcTotalAreas
+before OutputScenario
+after OutputScenario
+before CalcPenaltiesOptimise
+CalcPenaltiesOptimise start
+CalcPenaltiesOptimise spname 458
+CalcPenaltiesOptimise spname 458 penalty 103
+CalcPenaltiesOptimise spname 457
+CalcPenaltiesOptimise spname 457 penalty 699
+CalcPenaltiesOptimise spname 456
+CalcPenaltiesOptimise spname 456 penalty 192
+CalcPenaltiesOptimise spname 455
+CalcPenaltiesOptimise spname 455 penalty 2068
+CalcPenaltiesOptimise spname 454
+CalcPenaltiesOptimise spname 454 penalty 318
+CalcPenaltiesOptimise spname 453
+CalcPenaltiesOptimise spname 453 penalty 1823
+CalcPenaltiesOptimise spname 452
+CalcPenaltiesOptimise spname 452 penalty 885
+CalcPenaltiesOptimise spname 451
+CalcPenaltiesOptimise spname 451 penalty 4033
+CalcPenaltiesOptimise spname 450
+CalcPenaltiesOptimise spname 450 penalty 4720
+CalcPenaltiesOptimise spname 449
+CalcPenaltiesOptimise spname 449 penalty 11
+CalcPenaltiesOptimise spname 448
+CalcPenaltiesOptimise spname 448 penalty 415
+CalcPenaltiesOptimise spname 447
+CalcPenaltiesOptimise spname 447 penalty 29
+CalcPenaltiesOptimise spname 446
+CalcPenaltiesOptimise spname 446 penalty 10
+CalcPenaltiesOptimise spname 445
+CalcPenaltiesOptimise spname 445 penalty 6
+CalcPenaltiesOptimise spname 444
+CalcPenaltiesOptimise spname 444 penalty 703
+CalcPenaltiesOptimise spname 443
+CalcPenaltiesOptimise spname 443 penalty 68
+CalcPenaltiesOptimise spname 442
+CalcPenaltiesOptimise spname 442 penalty 10
+CalcPenaltiesOptimise spname 441
+CalcPenaltiesOptimise spname 441 penalty 64
+CalcPenaltiesOptimise spname 440
+CalcPenaltiesOptimise spname 440 penalty 70
+CalcPenaltiesOptimise spname 439
+CalcPenaltiesOptimise spname 439 penalty 4977
+CalcPenaltiesOptimise spname 438
+CalcPenaltiesOptimise spname 438 penalty 178
+CalcPenaltiesOptimise spname 437
+CalcPenaltiesOptimise spname 437 penalty 1679
+CalcPenaltiesOptimise spname 436
+CalcPenaltiesOptimise spname 436 penalty 1065
+CalcPenaltiesOptimise spname 435
+CalcPenaltiesOptimise spname 435 penalty 4073
+CalcPenaltiesOptimise spname 434
+CalcPenaltiesOptimise spname 434 penalty 82
+CalcPenaltiesOptimise spname 433
+CalcPenaltiesOptimise spname 433 penalty 569
+CalcPenaltiesOptimise spname 432
+CalcPenaltiesOptimise spname 432 penalty 44
+CalcPenaltiesOptimise spname 431
+CalcPenaltiesOptimise spname 431 penalty 1441
+CalcPenaltiesOptimise spname 430
+CalcPenaltiesOptimise spname 430 penalty 167
+CalcPenaltiesOptimise spname 429
+CalcPenaltiesOptimise spname 429 penalty 1110
+CalcPenaltiesOptimise spname 428
+CalcPenaltiesOptimise spname 428 penalty 117
+CalcPenaltiesOptimise spname 427
+CalcPenaltiesOptimise spname 427 penalty 1177
+CalcPenaltiesOptimise spname 426
+CalcPenaltiesOptimise spname 426 penalty 956
+CalcPenaltiesOptimise spname 425
+CalcPenaltiesOptimise spname 425 penalty 558
+CalcPenaltiesOptimise spname 424
+CalcPenaltiesOptimise spname 424 penalty 492
+CalcPenaltiesOptimise spname 423
+CalcPenaltiesOptimise spname 423 penalty 2779
+CalcPenaltiesOptimise spname 422
+CalcPenaltiesOptimise spname 422 penalty 2770
+CalcPenaltiesOptimise spname 421
+CalcPenaltiesOptimise spname 421 penalty 5671
+CalcPenaltiesOptimise spname 420
+CalcPenaltiesOptimise spname 420 penalty 10
+CalcPenaltiesOptimise spname 419
+CalcPenaltiesOptimise spname 419 penalty 5383
+CalcPenaltiesOptimise spname 418
+CalcPenaltiesOptimise spname 418 penalty 2991
+CalcPenaltiesOptimise spname 417
+CalcPenaltiesOptimise spname 417 penalty 4792
+CalcPenaltiesOptimise spname 416
+CalcPenaltiesOptimise spname 416 penalty 713
+CalcPenaltiesOptimise spname 415
+CalcPenaltiesOptimise spname 415 penalty 607
+CalcPenaltiesOptimise spname 414
+CalcPenaltiesOptimise spname 414 penalty 944
+CalcPenaltiesOptimise spname 413
+CalcPenaltiesOptimise spname 413 penalty 5773
+CalcPenaltiesOptimise spname 412
+CalcPenaltiesOptimise spname 412 penalty 315
+CalcPenaltiesOptimise spname 411
+CalcPenaltiesOptimise spname 411 penalty 468
+CalcPenaltiesOptimise spname 410
+CalcPenaltiesOptimise spname 410 penalty 120
+CalcPenaltiesOptimise spname 409
+CalcPenaltiesOptimise spname 409 penalty 838
+CalcPenaltiesOptimise spname 408
+CalcPenaltiesOptimise spname 408 penalty 2626
+CalcPenaltiesOptimise spname 407
+CalcPenaltiesOptimise spname 407 penalty 39
+CalcPenaltiesOptimise spname 406
+CalcPenaltiesOptimise spname 406 penalty 1849
+CalcPenaltiesOptimise spname 405
+CalcPenaltiesOptimise spname 405 penalty 10
+CalcPenaltiesOptimise spname 404
+CalcPenaltiesOptimise spname 404 penalty 874
+CalcPenaltiesOptimise spname 403
+CalcPenaltiesOptimise spname 403 penalty 1864
+CalcPenaltiesOptimise spname 402
+CalcPenaltiesOptimise spname 402 penalty 592
+CalcPenaltiesOptimise spname 401
+CalcPenaltiesOptimise spname 401 penalty 368
+CalcPenaltiesOptimise spname 400
+CalcPenaltiesOptimise spname 400 penalty 330
+CalcPenaltiesOptimise spname 399
+CalcPenaltiesOptimise spname 399 penalty 54
+CalcPenaltiesOptimise spname 398
+CalcPenaltiesOptimise spname 398 penalty 43
+CalcPenaltiesOptimise spname 397
+CalcPenaltiesOptimise spname 397 penalty 224
+CalcPenaltiesOptimise spname 396
+CalcPenaltiesOptimise spname 396 penalty 103
+CalcPenaltiesOptimise spname 395
+CalcPenaltiesOptimise spname 395 penalty 87
+CalcPenaltiesOptimise spname 394
+CalcPenaltiesOptimise spname 394 penalty 11
+CalcPenaltiesOptimise spname 393
+CalcPenaltiesOptimise spname 393 penalty 5310
+CalcPenaltiesOptimise spname 392
+CalcPenaltiesOptimise spname 392 penalty 272
+CalcPenaltiesOptimise spname 391
+CalcPenaltiesOptimise spname 391 penalty 1662
+CalcPenaltiesOptimise spname 390
+CalcPenaltiesOptimise spname 390 penalty 4610
+CalcPenaltiesOptimise spname 389
+CalcPenaltiesOptimise spname 389 penalty 4361
+CalcPenaltiesOptimise spname 388
+CalcPenaltiesOptimise spname 388 penalty 1547
+CalcPenaltiesOptimise spname 387
+CalcPenaltiesOptimise spname 387 penalty 546
+CalcPenaltiesOptimise spname 386
+CalcPenaltiesOptimise spname 386 penalty 37
+CalcPenaltiesOptimise spname 385
+CalcPenaltiesOptimise spname 385 penalty 635
+CalcPenaltiesOptimise spname 384
+CalcPenaltiesOptimise spname 384 penalty 1575
+CalcPenaltiesOptimise spname 383
+CalcPenaltiesOptimise spname 383 penalty 98
+CalcPenaltiesOptimise spname 382
+CalcPenaltiesOptimise spname 382 penalty 99
+CalcPenaltiesOptimise spname 381
+CalcPenaltiesOptimise spname 381 penalty 703
+CalcPenaltiesOptimise spname 380
+CalcPenaltiesOptimise spname 380 penalty 230
+CalcPenaltiesOptimise spname 379
+CalcPenaltiesOptimise spname 379 penalty 3431
+CalcPenaltiesOptimise spname 378
+CalcPenaltiesOptimise spname 378 penalty 1652
+CalcPenaltiesOptimise spname 377
+CalcPenaltiesOptimise spname 377 penalty 345
+CalcPenaltiesOptimise spname 376
+CalcPenaltiesOptimise spname 376 penalty 2070
+CalcPenaltiesOptimise spname 375
+CalcPenaltiesOptimise spname 375 penalty 3147
+CalcPenaltiesOptimise spname 374
+CalcPenaltiesOptimise spname 374 penalty 1984
+CalcPenaltiesOptimise spname 373
+CalcPenaltiesOptimise spname 373 penalty 1954
+CalcPenaltiesOptimise spname 372
+CalcPenaltiesOptimise spname 372 penalty 937
+CalcPenaltiesOptimise spname 371
+CalcPenaltiesOptimise spname 371 penalty 1713
+CalcPenaltiesOptimise spname 370
+CalcPenaltiesOptimise spname 370 penalty 723
+CalcPenaltiesOptimise spname 369
+CalcPenaltiesOptimise spname 369 penalty 73
+CalcPenaltiesOptimise spname 368
+CalcPenaltiesOptimise spname 368 penalty 1036
+CalcPenaltiesOptimise spname 367
+CalcPenaltiesOptimise spname 367 penalty 624
+CalcPenaltiesOptimise spname 366
+CalcPenaltiesOptimise spname 366 penalty 279
+CalcPenaltiesOptimise spname 365
+CalcPenaltiesOptimise spname 365 penalty 1423
+CalcPenaltiesOptimise spname 364
+CalcPenaltiesOptimise spname 364 penalty 5634
+CalcPenaltiesOptimise spname 363
+CalcPenaltiesOptimise spname 363 penalty 4680
+CalcPenaltiesOptimise spname 362
+CalcPenaltiesOptimise spname 362 penalty 10
+CalcPenaltiesOptimise spname 361
+CalcPenaltiesOptimise spname 361 penalty 32
+CalcPenaltiesOptimise spname 360
+CalcPenaltiesOptimise spname 360 penalty 951
+CalcPenaltiesOptimise spname 359
+CalcPenaltiesOptimise spname 359 penalty 93
+CalcPenaltiesOptimise spname 358
+CalcPenaltiesOptimise spname 358 penalty 124
+CalcPenaltiesOptimise spname 357
+CalcPenaltiesOptimise spname 357 penalty 512
+CalcPenaltiesOptimise spname 356
+CalcPenaltiesOptimise spname 356 penalty 212
+CalcPenaltiesOptimise spname 355
+CalcPenaltiesOptimise spname 355 penalty 74
+CalcPenaltiesOptimise spname 354
+CalcPenaltiesOptimise spname 354 penalty 88
+CalcPenaltiesOptimise spname 353
+CalcPenaltiesOptimise spname 353 penalty 121
+CalcPenaltiesOptimise spname 352
+CalcPenaltiesOptimise spname 352 penalty 15
+CalcPenaltiesOptimise spname 351
+CalcPenaltiesOptimise spname 351 penalty 1012
+CalcPenaltiesOptimise spname 350
+CalcPenaltiesOptimise spname 350 penalty 2767
+CalcPenaltiesOptimise spname 349
+CalcPenaltiesOptimise spname 349 penalty 885
+CalcPenaltiesOptimise spname 348
+CalcPenaltiesOptimise spname 348 penalty 1639
+CalcPenaltiesOptimise spname 347
+CalcPenaltiesOptimise spname 347 penalty 50
+CalcPenaltiesOptimise spname 346
+CalcPenaltiesOptimise spname 346 penalty 156
+CalcPenaltiesOptimise spname 345
+CalcPenaltiesOptimise spname 345 penalty 80
+CalcPenaltiesOptimise spname 344
+CalcPenaltiesOptimise spname 344 penalty 115
+CalcPenaltiesOptimise spname 343
+CalcPenaltiesOptimise spname 343 penalty 11
+CalcPenaltiesOptimise spname 342
+CalcPenaltiesOptimise spname 342 penalty 64
+CalcPenaltiesOptimise spname 341
+CalcPenaltiesOptimise spname 341 penalty 785
+CalcPenaltiesOptimise spname 340
+CalcPenaltiesOptimise spname 340 penalty 4950
+CalcPenaltiesOptimise spname 339
+CalcPenaltiesOptimise spname 339 penalty 5119
+CalcPenaltiesOptimise spname 338
+CalcPenaltiesOptimise spname 338 penalty 4947
+CalcPenaltiesOptimise spname 337
+CalcPenaltiesOptimise spname 337 penalty 10
+CalcPenaltiesOptimise spname 336
+CalcPenaltiesOptimise spname 336 penalty 3
+CalcPenaltiesOptimise spname 335
+CalcPenaltiesOptimise spname 335 penalty 582
+CalcPenaltiesOptimise spname 334
+CalcPenaltiesOptimise spname 334 penalty 302
+CalcPenaltiesOptimise spname 333
+CalcPenaltiesOptimise spname 333 penalty 175
+CalcPenaltiesOptimise spname 332
+CalcPenaltiesOptimise spname 332 penalty 504
+CalcPenaltiesOptimise spname 331
+CalcPenaltiesOptimise spname 331 penalty 17
+CalcPenaltiesOptimise spname 330
+CalcPenaltiesOptimise spname 330 penalty 17
+CalcPenaltiesOptimise spname 329
+CalcPenaltiesOptimise spname 329 penalty 388
+CalcPenaltiesOptimise spname 328
+CalcPenaltiesOptimise spname 328 penalty 10
+CalcPenaltiesOptimise spname 327
+CalcPenaltiesOptimise spname 327 penalty 277
+CalcPenaltiesOptimise spname 326
+CalcPenaltiesOptimise spname 326 penalty 10
+CalcPenaltiesOptimise spname 325
+CalcPenaltiesOptimise spname 325 penalty 335
+CalcPenaltiesOptimise spname 324
+CalcPenaltiesOptimise spname 324 penalty 4195
+CalcPenaltiesOptimise spname 323
+CalcPenaltiesOptimise spname 323 penalty 1816
+CalcPenaltiesOptimise spname 322
+CalcPenaltiesOptimise spname 322 penalty 378
+CalcPenaltiesOptimise spname 321
+CalcPenaltiesOptimise spname 321 penalty 764
+CalcPenaltiesOptimise spname 320
+CalcPenaltiesOptimise spname 320 penalty 37
+CalcPenaltiesOptimise spname 319
+CalcPenaltiesOptimise spname 319 penalty 5130
+CalcPenaltiesOptimise spname 318
+CalcPenaltiesOptimise spname 318 penalty 2647
+CalcPenaltiesOptimise spname 317
+CalcPenaltiesOptimise spname 317 penalty 4474
+CalcPenaltiesOptimise spname 316
+CalcPenaltiesOptimise spname 316 penalty 2335
+CalcPenaltiesOptimise spname 315
+CalcPenaltiesOptimise spname 315 penalty 312
+CalcPenaltiesOptimise spname 314
+CalcPenaltiesOptimise spname 314 penalty 848
+CalcPenaltiesOptimise spname 313
+CalcPenaltiesOptimise spname 313 penalty 740
+CalcPenaltiesOptimise spname 312
+CalcPenaltiesOptimise spname 312 penalty 458
+CalcPenaltiesOptimise spname 311
+CalcPenaltiesOptimise spname 311 penalty 438
+CalcPenaltiesOptimise spname 310
+CalcPenaltiesOptimise spname 310 penalty 285
+CalcPenaltiesOptimise spname 309
+CalcPenaltiesOptimise spname 309 penalty 64
+CalcPenaltiesOptimise spname 308
+CalcPenaltiesOptimise spname 308 penalty 460
+CalcPenaltiesOptimise spname 307
+CalcPenaltiesOptimise spname 307 penalty 781
+CalcPenaltiesOptimise spname 306
+CalcPenaltiesOptimise spname 306 penalty 535
+CalcPenaltiesOptimise spname 305
+CalcPenaltiesOptimise spname 305 penalty 467
+CalcPenaltiesOptimise spname 304
+CalcPenaltiesOptimise spname 304 penalty 2182
+CalcPenaltiesOptimise spname 303
+CalcPenaltiesOptimise spname 303 penalty 215
+CalcPenaltiesOptimise spname 302
+CalcPenaltiesOptimise spname 302 penalty 1314
+CalcPenaltiesOptimise spname 301
+CalcPenaltiesOptimise spname 301 penalty 1195
+CalcPenaltiesOptimise spname 300
+CalcPenaltiesOptimise spname 300 penalty 2271
+CalcPenaltiesOptimise spname 299
+CalcPenaltiesOptimise spname 299 penalty 1778
+CalcPenaltiesOptimise spname 298
+CalcPenaltiesOptimise spname 298 penalty 533
+CalcPenaltiesOptimise spname 297
+CalcPenaltiesOptimise spname 297 penalty 3280
+CalcPenaltiesOptimise spname 296
+CalcPenaltiesOptimise spname 296 penalty 2590
+CalcPenaltiesOptimise spname 295
+CalcPenaltiesOptimise spname 295 penalty 2081
+CalcPenaltiesOptimise spname 294
+CalcPenaltiesOptimise spname 294 penalty 548
+CalcPenaltiesOptimise spname 293
+CalcPenaltiesOptimise spname 293 penalty 3509
+CalcPenaltiesOptimise spname 292
+CalcPenaltiesOptimise spname 292 penalty 3082
+CalcPenaltiesOptimise spname 291
+CalcPenaltiesOptimise spname 291 penalty 436
+CalcPenaltiesOptimise spname 290
+CalcPenaltiesOptimise spname 290 penalty 4292
+CalcPenaltiesOptimise spname 289
+CalcPenaltiesOptimise spname 289 penalty 5177
+CalcPenaltiesOptimise spname 288
+CalcPenaltiesOptimise spname 288 penalty 1041
+CalcPenaltiesOptimise spname 287
+CalcPenaltiesOptimise spname 287 penalty 4728
+CalcPenaltiesOptimise spname 286
+CalcPenaltiesOptimise spname 286 penalty 5054
+CalcPenaltiesOptimise spname 285
+CalcPenaltiesOptimise spname 285 penalty 209
+CalcPenaltiesOptimise spname 284
+CalcPenaltiesOptimise spname 284 penalty 281
+CalcPenaltiesOptimise spname 283
+CalcPenaltiesOptimise spname 283 penalty 4
+CalcPenaltiesOptimise spname 282
+CalcPenaltiesOptimise spname 282 penalty 2172
+CalcPenaltiesOptimise spname 281
+CalcPenaltiesOptimise spname 281 penalty 3670
+CalcPenaltiesOptimise spname 280
+CalcPenaltiesOptimise spname 280 penalty 4020
+CalcPenaltiesOptimise spname 279
+CalcPenaltiesOptimise spname 279 penalty 266
+CalcPenaltiesOptimise spname 278
+CalcPenaltiesOptimise spname 278 penalty 185
+CalcPenaltiesOptimise spname 277
+CalcPenaltiesOptimise spname 277 penalty 62
+CalcPenaltiesOptimise spname 276
+CalcPenaltiesOptimise spname 276 penalty 2493
+CalcPenaltiesOptimise spname 275
+CalcPenaltiesOptimise spname 275 penalty 5046
+CalcPenaltiesOptimise spname 274
+CalcPenaltiesOptimise spname 274 penalty 4780
+CalcPenaltiesOptimise spname 273
+CalcPenaltiesOptimise spname 273 penalty 559
+CalcPenaltiesOptimise spname 272
+CalcPenaltiesOptimise spname 272 penalty 1296
+CalcPenaltiesOptimise spname 271
+CalcPenaltiesOptimise spname 271 penalty 5119
+CalcPenaltiesOptimise spname 270
+CalcPenaltiesOptimise spname 270 penalty 4832
+CalcPenaltiesOptimise spname 269
+CalcPenaltiesOptimise spname 269 penalty 378
+CalcPenaltiesOptimise spname 268
+CalcPenaltiesOptimise spname 268 penalty 7
+CalcPenaltiesOptimise spname 267
+CalcPenaltiesOptimise spname 267 penalty 42
+CalcPenaltiesOptimise spname 266
+CalcPenaltiesOptimise spname 266 penalty 4949
+CalcPenaltiesOptimise spname 265
+CalcPenaltiesOptimise spname 265 penalty 794
+CalcPenaltiesOptimise spname 264
+CalcPenaltiesOptimise spname 264 penalty 382
+CalcPenaltiesOptimise spname 263
+CalcPenaltiesOptimise spname 263 penalty 2557
+CalcPenaltiesOptimise spname 262
+CalcPenaltiesOptimise spname 262 penalty 339
+CalcPenaltiesOptimise spname 261
+CalcPenaltiesOptimise spname 261 penalty 680
+CalcPenaltiesOptimise spname 260
+CalcPenaltiesOptimise spname 260 penalty 1094
+CalcPenaltiesOptimise spname 259
+CalcPenaltiesOptimise spname 259 penalty 989
+CalcPenaltiesOptimise spname 258
+CalcPenaltiesOptimise spname 258 penalty 2792
+CalcPenaltiesOptimise spname 257
+CalcPenaltiesOptimise spname 257 penalty 546
+CalcPenaltiesOptimise spname 256
+CalcPenaltiesOptimise spname 256 penalty 596
+CalcPenaltiesOptimise spname 255
+CalcPenaltiesOptimise spname 255 penalty 1600
+CalcPenaltiesOptimise spname 254
+CalcPenaltiesOptimise spname 254 penalty 4719
+CalcPenaltiesOptimise spname 253
+CalcPenaltiesOptimise spname 253 penalty 4582
+CalcPenaltiesOptimise spname 252
+CalcPenaltiesOptimise spname 252 penalty 290
+CalcPenaltiesOptimise spname 251
+CalcPenaltiesOptimise spname 251 penalty 2313
+CalcPenaltiesOptimise spname 250
+CalcPenaltiesOptimise spname 250 penalty 4904
+CalcPenaltiesOptimise spname 249
+CalcPenaltiesOptimise spname 249 penalty 5619
+CalcPenaltiesOptimise spname 248
+CalcPenaltiesOptimise spname 248 penalty 2715
+CalcPenaltiesOptimise spname 247
+CalcPenaltiesOptimise spname 247 penalty 765
+CalcPenaltiesOptimise spname 246
+CalcPenaltiesOptimise spname 246 penalty 2180
+CalcPenaltiesOptimise spname 245
+CalcPenaltiesOptimise spname 245 penalty 139
+CalcPenaltiesOptimise spname 244
+CalcPenaltiesOptimise spname 244 penalty 5326
+CalcPenaltiesOptimise spname 243
+CalcPenaltiesOptimise spname 243 penalty 1810
+CalcPenaltiesOptimise spname 242
+CalcPenaltiesOptimise spname 242 penalty 4668
+CalcPenaltiesOptimise spname 241
+CalcPenaltiesOptimise spname 241 penalty 19
+CalcPenaltiesOptimise spname 240
+CalcPenaltiesOptimise spname 240 penalty 20
+CalcPenaltiesOptimise spname 239
+CalcPenaltiesOptimise spname 239 penalty 71
+CalcPenaltiesOptimise spname 238
+CalcPenaltiesOptimise spname 238 penalty 32
+CalcPenaltiesOptimise spname 237
+CalcPenaltiesOptimise spname 237 penalty 208
+CalcPenaltiesOptimise spname 236
+CalcPenaltiesOptimise spname 236 penalty 31
+CalcPenaltiesOptimise spname 235
+CalcPenaltiesOptimise spname 235 penalty 10
+CalcPenaltiesOptimise spname 234
+CalcPenaltiesOptimise spname 234 penalty 15
+CalcPenaltiesOptimise spname 233
+CalcPenaltiesOptimise spname 233 penalty 64
+CalcPenaltiesOptimise spname 232
+CalcPenaltiesOptimise spname 232 penalty 65
+CalcPenaltiesOptimise spname 231
+CalcPenaltiesOptimise spname 231 penalty 153
+CalcPenaltiesOptimise spname 230
+CalcPenaltiesOptimise spname 230 penalty 37
+CalcPenaltiesOptimise spname 229
+CalcPenaltiesOptimise spname 229 penalty 138
+CalcPenaltiesOptimise spname 228
+CalcPenaltiesOptimise spname 228 penalty 23
+CalcPenaltiesOptimise spname 227
+CalcPenaltiesOptimise spname 227 penalty 3854
+CalcPenaltiesOptimise spname 226
+CalcPenaltiesOptimise spname 226 penalty 2434
+CalcPenaltiesOptimise spname 225
+CalcPenaltiesOptimise spname 225 penalty 440
+CalcPenaltiesOptimise spname 224
+CalcPenaltiesOptimise spname 224 penalty 54
+CalcPenaltiesOptimise spname 223
+CalcPenaltiesOptimise spname 223 penalty 1526
+CalcPenaltiesOptimise spname 222
+CalcPenaltiesOptimise spname 222 penalty 3076
+CalcPenaltiesOptimise spname 221
+CalcPenaltiesOptimise spname 221 penalty 93
+CalcPenaltiesOptimise spname 220
+CalcPenaltiesOptimise spname 220 penalty 2321
+CalcPenaltiesOptimise spname 219
+CalcPenaltiesOptimise spname 219 penalty 19
+CalcPenaltiesOptimise spname 218
+CalcPenaltiesOptimise spname 218 penalty 3671
+CalcPenaltiesOptimise spname 217
+CalcPenaltiesOptimise spname 217 penalty 74
+CalcPenaltiesOptimise spname 216
+CalcPenaltiesOptimise spname 216 penalty 506
+CalcPenaltiesOptimise spname 215
+CalcPenaltiesOptimise spname 215 penalty 679
+CalcPenaltiesOptimise spname 214
+CalcPenaltiesOptimise spname 214 penalty 98
+CalcPenaltiesOptimise spname 213
+CalcPenaltiesOptimise spname 213 penalty 608
+CalcPenaltiesOptimise spname 212
+CalcPenaltiesOptimise spname 212 penalty 1040
+CalcPenaltiesOptimise spname 211
+CalcPenaltiesOptimise spname 211 penalty 696
+CalcPenaltiesOptimise spname 210
+CalcPenaltiesOptimise spname 210 penalty 2601
+CalcPenaltiesOptimise spname 209
+CalcPenaltiesOptimise spname 209 penalty 4814
+CalcPenaltiesOptimise spname 208
+CalcPenaltiesOptimise spname 208 penalty 956
+CalcPenaltiesOptimise spname 207
+CalcPenaltiesOptimise spname 207 penalty 1738
+CalcPenaltiesOptimise spname 206
+CalcPenaltiesOptimise spname 206 penalty 5259
+CalcPenaltiesOptimise spname 205
+CalcPenaltiesOptimise spname 205 penalty 1793
+CalcPenaltiesOptimise spname 204
+CalcPenaltiesOptimise spname 204 penalty 1951
+CalcPenaltiesOptimise spname 203
+CalcPenaltiesOptimise spname 203 penalty 983
+CalcPenaltiesOptimise spname 202
+CalcPenaltiesOptimise spname 202 penalty 2186
+CalcPenaltiesOptimise spname 201
+CalcPenaltiesOptimise spname 201 penalty 4809
+CalcPenaltiesOptimise spname 200
+CalcPenaltiesOptimise spname 200 penalty 381
+CalcPenaltiesOptimise spname 199
+CalcPenaltiesOptimise spname 199 penalty 1561
+CalcPenaltiesOptimise spname 198
+CalcPenaltiesOptimise spname 198 penalty 5181
+CalcPenaltiesOptimise spname 197
+CalcPenaltiesOptimise spname 197 penalty 9
+CalcPenaltiesOptimise spname 196
+CalcPenaltiesOptimise spname 196 penalty 21
+CalcPenaltiesOptimise spname 195
+CalcPenaltiesOptimise spname 195 penalty 29
+CalcPenaltiesOptimise spname 194
+CalcPenaltiesOptimise spname 194 penalty 10
+CalcPenaltiesOptimise spname 193
+CalcPenaltiesOptimise spname 193 penalty 1855
+CalcPenaltiesOptimise spname 192
+CalcPenaltiesOptimise spname 192 penalty 4465
+CalcPenaltiesOptimise spname 191
+CalcPenaltiesOptimise spname 191 penalty 4426
+CalcPenaltiesOptimise spname 190
+CalcPenaltiesOptimise spname 190 penalty 4658
+CalcPenaltiesOptimise spname 189
+CalcPenaltiesOptimise spname 189 penalty 1677
+CalcPenaltiesOptimise spname 188
+CalcPenaltiesOptimise spname 188 penalty 10
+CalcPenaltiesOptimise spname 187
+CalcPenaltiesOptimise spname 187 penalty 64
+CalcPenaltiesOptimise spname 186
+CalcPenaltiesOptimise spname 186 penalty 21
+CalcPenaltiesOptimise spname 185
+CalcPenaltiesOptimise spname 185 penalty 2
+CalcPenaltiesOptimise spname 184
+CalcPenaltiesOptimise spname 184 penalty 181
+CalcPenaltiesOptimise spname 183
+CalcPenaltiesOptimise spname 183 penalty 4124
+CalcPenaltiesOptimise spname 182
+CalcPenaltiesOptimise spname 182 penalty 1226
+CalcPenaltiesOptimise spname 181
+CalcPenaltiesOptimise spname 181 penalty 920
+CalcPenaltiesOptimise spname 180
+CalcPenaltiesOptimise spname 180 penalty 190
+CalcPenaltiesOptimise spname 179
+CalcPenaltiesOptimise spname 179 penalty 713
+CalcPenaltiesOptimise spname 178
+CalcPenaltiesOptimise spname 178 penalty 25
+CalcPenaltiesOptimise spname 177
+CalcPenaltiesOptimise spname 177 penalty 789
+CalcPenaltiesOptimise spname 176
+CalcPenaltiesOptimise spname 176 penalty 56
+CalcPenaltiesOptimise spname 175
+CalcPenaltiesOptimise spname 175 penalty 11
+CalcPenaltiesOptimise spname 174
+CalcPenaltiesOptimise spname 174 penalty 401
+CalcPenaltiesOptimise spname 173
+CalcPenaltiesOptimise spname 173 penalty 355
+CalcPenaltiesOptimise spname 172
+CalcPenaltiesOptimise spname 172 penalty 297
+CalcPenaltiesOptimise spname 171
+CalcPenaltiesOptimise spname 171 penalty 2040
+CalcPenaltiesOptimise spname 170
+CalcPenaltiesOptimise spname 170 penalty 605
+CalcPenaltiesOptimise spname 169
+CalcPenaltiesOptimise spname 169 penalty 85
+CalcPenaltiesOptimise spname 168
+CalcPenaltiesOptimise spname 168 penalty 4050
+CalcPenaltiesOptimise spname 167
+CalcPenaltiesOptimise spname 167 penalty 175
+CalcPenaltiesOptimise spname 166
+CalcPenaltiesOptimise spname 166 penalty 1283
+CalcPenaltiesOptimise spname 165
+CalcPenaltiesOptimise spname 165 penalty 5386
+CalcPenaltiesOptimise spname 164
+CalcPenaltiesOptimise spname 164 penalty 4281
+CalcPenaltiesOptimise spname 163
+CalcPenaltiesOptimise spname 163 penalty 1179
+CalcPenaltiesOptimise spname 162
+CalcPenaltiesOptimise spname 162 penalty 1895
+CalcPenaltiesOptimise spname 161
+CalcPenaltiesOptimise spname 161 penalty 4741
+CalcPenaltiesOptimise spname 160
+CalcPenaltiesOptimise spname 160 penalty 602
+CalcPenaltiesOptimise spname 159
+CalcPenaltiesOptimise spname 159 penalty 90
+CalcPenaltiesOptimise spname 158
+CalcPenaltiesOptimise spname 158 penalty 2035
+CalcPenaltiesOptimise spname 157
+CalcPenaltiesOptimise spname 157 penalty 1613
+CalcPenaltiesOptimise spname 156
+CalcPenaltiesOptimise spname 156 penalty 1708
+CalcPenaltiesOptimise spname 155
+CalcPenaltiesOptimise spname 155 penalty 262
+CalcPenaltiesOptimise spname 154
+CalcPenaltiesOptimise spname 154 penalty 4778
+CalcPenaltiesOptimise spname 153
+CalcPenaltiesOptimise spname 153 penalty 1103
+CalcPenaltiesOptimise spname 152
+CalcPenaltiesOptimise spname 152 penalty 4367
+CalcPenaltiesOptimise spname 151
+CalcPenaltiesOptimise spname 151 penalty 3749
+CalcPenaltiesOptimise spname 150
+CalcPenaltiesOptimise spname 150 penalty 2073
+CalcPenaltiesOptimise spname 149
+CalcPenaltiesOptimise spname 149 penalty 1707
+CalcPenaltiesOptimise spname 148
+CalcPenaltiesOptimise spname 148 penalty 34
+CalcPenaltiesOptimise spname 147
+CalcPenaltiesOptimise spname 147 penalty 4281
+CalcPenaltiesOptimise spname 146
+CalcPenaltiesOptimise spname 146 penalty 781
+CalcPenaltiesOptimise spname 145
+CalcPenaltiesOptimise spname 145 penalty 876
+CalcPenaltiesOptimise spname 144
+CalcPenaltiesOptimise spname 144 penalty 1592
+CalcPenaltiesOptimise spname 143
+CalcPenaltiesOptimise spname 143 penalty 153
+CalcPenaltiesOptimise spname 142
+CalcPenaltiesOptimise spname 142 penalty 620
+CalcPenaltiesOptimise spname 141
+CalcPenaltiesOptimise spname 141 penalty 2123
+CalcPenaltiesOptimise spname 140
+CalcPenaltiesOptimise spname 140 penalty 4763
+CalcPenaltiesOptimise spname 139
+CalcPenaltiesOptimise spname 139 penalty 3498
+CalcPenaltiesOptimise spname 138
+CalcPenaltiesOptimise spname 138 penalty 2856
+CalcPenaltiesOptimise spname 137
+CalcPenaltiesOptimise spname 137 penalty 4850
+CalcPenaltiesOptimise spname 136
+CalcPenaltiesOptimise spname 136 penalty 51
+CalcPenaltiesOptimise spname 135
+CalcPenaltiesOptimise spname 135 penalty 4435
+CalcPenaltiesOptimise spname 134
+CalcPenaltiesOptimise spname 134 penalty 1073
+CalcPenaltiesOptimise spname 133
+CalcPenaltiesOptimise spname 133 penalty 5214
+CalcPenaltiesOptimise spname 132
+CalcPenaltiesOptimise spname 132 penalty 4414
+CalcPenaltiesOptimise spname 131
+CalcPenaltiesOptimise spname 131 penalty 69
+CalcPenaltiesOptimise spname 130
+CalcPenaltiesOptimise spname 130 penalty 731
+CalcPenaltiesOptimise spname 129
+CalcPenaltiesOptimise spname 129 penalty 142
+CalcPenaltiesOptimise spname 128
+CalcPenaltiesOptimise spname 128 penalty 30
+CalcPenaltiesOptimise spname 127
+CalcPenaltiesOptimise spname 127 penalty 1280
+CalcPenaltiesOptimise spname 126
+CalcPenaltiesOptimise spname 126 penalty 2452
+CalcPenaltiesOptimise spname 125
+CalcPenaltiesOptimise spname 125 penalty 402
+CalcPenaltiesOptimise spname 124
+CalcPenaltiesOptimise spname 124 penalty 4691
+CalcPenaltiesOptimise spname 123
+CalcPenaltiesOptimise spname 123 penalty 5312
+CalcPenaltiesOptimise spname 122
+CalcPenaltiesOptimise spname 122 penalty 4834
+CalcPenaltiesOptimise spname 121
+CalcPenaltiesOptimise spname 121 penalty 3063
+CalcPenaltiesOptimise spname 120
+CalcPenaltiesOptimise spname 120 penalty 1387
+CalcPenaltiesOptimise spname 119
+CalcPenaltiesOptimise spname 119 penalty 151
+CalcPenaltiesOptimise spname 118
+CalcPenaltiesOptimise spname 118 penalty 265
+CalcPenaltiesOptimise spname 117
+CalcPenaltiesOptimise spname 117 penalty 89
+CalcPenaltiesOptimise spname 116
+CalcPenaltiesOptimise spname 116 penalty 4303
+CalcPenaltiesOptimise spname 115
+CalcPenaltiesOptimise spname 115 penalty 2311
+CalcPenaltiesOptimise spname 114
+CalcPenaltiesOptimise spname 114 penalty 1940
+CalcPenaltiesOptimise spname 113
+CalcPenaltiesOptimise spname 113 penalty 2474
+CalcPenaltiesOptimise spname 112
+CalcPenaltiesOptimise spname 112 penalty 48
+CalcPenaltiesOptimise spname 111
+CalcPenaltiesOptimise spname 111 penalty 372
+CalcPenaltiesOptimise spname 110
+CalcPenaltiesOptimise spname 110 penalty 1339
+CalcPenaltiesOptimise spname 109
+CalcPenaltiesOptimise spname 109 penalty 2363
+CalcPenaltiesOptimise spname 108
+CalcPenaltiesOptimise spname 108 penalty 5060
+CalcPenaltiesOptimise spname 107
+CalcPenaltiesOptimise spname 107 penalty 3921
+CalcPenaltiesOptimise spname 106
+CalcPenaltiesOptimise spname 106 penalty 5290
+CalcPenaltiesOptimise spname 105
+CalcPenaltiesOptimise spname 105 penalty 56
+CalcPenaltiesOptimise spname 104
+CalcPenaltiesOptimise spname 104 penalty 12
+CalcPenaltiesOptimise spname 103
+CalcPenaltiesOptimise spname 103 penalty 10
+CalcPenaltiesOptimise spname 102
+CalcPenaltiesOptimise spname 102 penalty 110
+CalcPenaltiesOptimise spname 101
+CalcPenaltiesOptimise spname 101 penalty 10
+CalcPenaltiesOptimise spname 100
+CalcPenaltiesOptimise spname 100 penalty 1149
+CalcPenaltiesOptimise spname 99
+CalcPenaltiesOptimise spname 99 penalty 2676
+CalcPenaltiesOptimise spname 98
+CalcPenaltiesOptimise spname 98 penalty 861
+CalcPenaltiesOptimise spname 97
+CalcPenaltiesOptimise spname 97 penalty 4
+CalcPenaltiesOptimise spname 96
+CalcPenaltiesOptimise spname 96 penalty 170
+CalcPenaltiesOptimise spname 95
+CalcPenaltiesOptimise spname 95 penalty 5678
+CalcPenaltiesOptimise spname 94
+CalcPenaltiesOptimise spname 94 penalty 409
+CalcPenaltiesOptimise spname 93
+CalcPenaltiesOptimise spname 93 penalty 438
+CalcPenaltiesOptimise spname 92
+CalcPenaltiesOptimise spname 92 penalty 171
+CalcPenaltiesOptimise spname 91
+CalcPenaltiesOptimise spname 91 penalty 2
+CalcPenaltiesOptimise spname 90
+CalcPenaltiesOptimise spname 90 penalty 1583
+CalcPenaltiesOptimise spname 89
+CalcPenaltiesOptimise spname 89 penalty 2412
+CalcPenaltiesOptimise spname 88
+CalcPenaltiesOptimise spname 88 penalty 5408
+CalcPenaltiesOptimise spname 87
+CalcPenaltiesOptimise spname 87 penalty 1382
+CalcPenaltiesOptimise spname 86
+CalcPenaltiesOptimise spname 86 penalty 355
+CalcPenaltiesOptimise spname 85
+CalcPenaltiesOptimise spname 85 penalty 275
+CalcPenaltiesOptimise spname 84
+CalcPenaltiesOptimise spname 84 penalty 485
+CalcPenaltiesOptimise spname 83
+CalcPenaltiesOptimise spname 83 penalty 988
+CalcPenaltiesOptimise spname 82
+CalcPenaltiesOptimise spname 82 penalty 3
+CalcPenaltiesOptimise spname 81
+CalcPenaltiesOptimise spname 81 penalty 2955
+CalcPenaltiesOptimise spname 80
+CalcPenaltiesOptimise spname 80 penalty 3120
+CalcPenaltiesOptimise spname 79
+CalcPenaltiesOptimise spname 79 penalty 2383
+CalcPenaltiesOptimise spname 78
+CalcPenaltiesOptimise spname 78 penalty 250
+CalcPenaltiesOptimise spname 77
+CalcPenaltiesOptimise spname 77 penalty 221
+CalcPenaltiesOptimise spname 76
+CalcPenaltiesOptimise spname 76 penalty 154
+CalcPenaltiesOptimise spname 75
+CalcPenaltiesOptimise spname 75 penalty 126
+CalcPenaltiesOptimise spname 74
+CalcPenaltiesOptimise spname 74 penalty 1468
+CalcPenaltiesOptimise spname 73
+CalcPenaltiesOptimise spname 73 penalty 1285
+CalcPenaltiesOptimise spname 72
+CalcPenaltiesOptimise spname 72 penalty 33
+CalcPenaltiesOptimise spname 71
+CalcPenaltiesOptimise spname 71 penalty 237
+CalcPenaltiesOptimise spname 70
+CalcPenaltiesOptimise spname 70 penalty 2919
+CalcPenaltiesOptimise spname 69
+CalcPenaltiesOptimise spname 69 penalty 3981
+CalcPenaltiesOptimise spname 68
+CalcPenaltiesOptimise spname 68 penalty 192
+CalcPenaltiesOptimise spname 67
+CalcPenaltiesOptimise spname 67 penalty 935
+CalcPenaltiesOptimise spname 66
+CalcPenaltiesOptimise spname 66 penalty 533
+CalcPenaltiesOptimise spname 65
+CalcPenaltiesOptimise spname 65 penalty 73
+CalcPenaltiesOptimise spname 64
+CalcPenaltiesOptimise spname 64 penalty 687
+CalcPenaltiesOptimise spname 63
+CalcPenaltiesOptimise spname 63 penalty 274
+CalcPenaltiesOptimise spname 62
+CalcPenaltiesOptimise spname 62 penalty 5078
+CalcPenaltiesOptimise spname 61
+CalcPenaltiesOptimise spname 61 penalty 3869
+CalcPenaltiesOptimise spname 60
+CalcPenaltiesOptimise spname 60 penalty 671
+CalcPenaltiesOptimise spname 59
+CalcPenaltiesOptimise spname 59 penalty 2146
+CalcPenaltiesOptimise spname 58
+CalcPenaltiesOptimise spname 58 penalty 1320
+CalcPenaltiesOptimise spname 57
+CalcPenaltiesOptimise spname 57 penalty 134
+CalcPenaltiesOptimise spname 56
+CalcPenaltiesOptimise spname 56 penalty 1610
+CalcPenaltiesOptimise spname 55
+CalcPenaltiesOptimise spname 55 penalty 1369
+CalcPenaltiesOptimise spname 54
+CalcPenaltiesOptimise spname 54 penalty 1272
+CalcPenaltiesOptimise spname 53
+CalcPenaltiesOptimise spname 53 penalty 1317
+CalcPenaltiesOptimise spname 52
+CalcPenaltiesOptimise spname 52 penalty 47
+CalcPenaltiesOptimise spname 51
+CalcPenaltiesOptimise spname 51 penalty 949
+CalcPenaltiesOptimise spname 50
+CalcPenaltiesOptimise spname 50 penalty 125
+CalcPenaltiesOptimise spname 49
+CalcPenaltiesOptimise spname 49 penalty 25
+CalcPenaltiesOptimise spname 48
+CalcPenaltiesOptimise spname 48 penalty 160
+CalcPenaltiesOptimise spname 47
+CalcPenaltiesOptimise spname 47 penalty 10
+CalcPenaltiesOptimise spname 46
+CalcPenaltiesOptimise spname 46 penalty 144
+CalcPenaltiesOptimise spname 45
+CalcPenaltiesOptimise spname 45 penalty 494
+CalcPenaltiesOptimise spname 44
+CalcPenaltiesOptimise spname 44 penalty 100
+CalcPenaltiesOptimise spname 43
+CalcPenaltiesOptimise spname 43 penalty 39
+CalcPenaltiesOptimise spname 42
+CalcPenaltiesOptimise spname 42 penalty 131
+CalcPenaltiesOptimise spname 41
+CalcPenaltiesOptimise spname 41 penalty 26
+CalcPenaltiesOptimise spname 40
+CalcPenaltiesOptimise spname 40 penalty 192
+CalcPenaltiesOptimise spname 39
+CalcPenaltiesOptimise spname 39 penalty 105
+CalcPenaltiesOptimise spname 38
+CalcPenaltiesOptimise spname 38 penalty 134
+CalcPenaltiesOptimise spname 37
+CalcPenaltiesOptimise spname 37 penalty 18
+CalcPenaltiesOptimise spname 36
+CalcPenaltiesOptimise spname 36 penalty 49
+CalcPenaltiesOptimise spname 35
+CalcPenaltiesOptimise spname 35 penalty 4652
+CalcPenaltiesOptimise spname 34
+CalcPenaltiesOptimise spname 34 penalty 74
+CalcPenaltiesOptimise spname 33
+CalcPenaltiesOptimise spname 33 penalty 98
+CalcPenaltiesOptimise spname 32
+CalcPenaltiesOptimise spname 32 penalty 74
+CalcPenaltiesOptimise spname 31
+CalcPenaltiesOptimise spname 31 penalty 253
+CalcPenaltiesOptimise spname 30
+CalcPenaltiesOptimise spname 30 penalty 425
+CalcPenaltiesOptimise spname 29
+CalcPenaltiesOptimise spname 29 penalty 314
+CalcPenaltiesOptimise spname 28
+CalcPenaltiesOptimise spname 28 penalty 1321
+CalcPenaltiesOptimise spname 27
+CalcPenaltiesOptimise spname 27 penalty 401
+CalcPenaltiesOptimise spname 26
+CalcPenaltiesOptimise spname 26 penalty 528
+CalcPenaltiesOptimise spname 25
+CalcPenaltiesOptimise spname 25 penalty 1259
+CalcPenaltiesOptimise spname 24
+CalcPenaltiesOptimise spname 24 penalty 3240
+CalcPenaltiesOptimise spname 23
+CalcPenaltiesOptimise spname 23 penalty 6028
+CalcPenaltiesOptimise spname 22
+CalcPenaltiesOptimise spname 22 penalty 4884
+CalcPenaltiesOptimise spname 21
+CalcPenaltiesOptimise spname 21 penalty 1038
+CalcPenaltiesOptimise spname 20
+CalcPenaltiesOptimise spname 20 penalty 3268
+CalcPenaltiesOptimise spname 19
+CalcPenaltiesOptimise spname 19 penalty 306
+CalcPenaltiesOptimise spname 18
+CalcPenaltiesOptimise spname 18 penalty 1074
+CalcPenaltiesOptimise spname 17
+CalcPenaltiesOptimise spname 17 penalty 1437
+CalcPenaltiesOptimise spname 16
+CalcPenaltiesOptimise spname 16 penalty 2447
+CalcPenaltiesOptimise spname 15
+CalcPenaltiesOptimise spname 15 penalty 101
+CalcPenaltiesOptimise spname 14
+CalcPenaltiesOptimise spname 14 penalty 989
+CalcPenaltiesOptimise spname 13
+CalcPenaltiesOptimise spname 13 penalty 238
+CalcPenaltiesOptimise spname 12
+CalcPenaltiesOptimise spname 12 penalty 1041
+CalcPenaltiesOptimise spname 11
+CalcPenaltiesOptimise spname 11 penalty 379
+CalcPenaltiesOptimise spname 10
+CalcPenaltiesOptimise spname 10 penalty 1596
+CalcPenaltiesOptimise spname 9
+CalcPenaltiesOptimise spname 9 penalty 872
+CalcPenaltiesOptimise spname 8
+CalcPenaltiesOptimise spname 8 penalty 278
+CalcPenaltiesOptimise spname 7
+CalcPenaltiesOptimise spname 7 penalty 24
+CalcPenaltiesOptimise spname 6
+CalcPenaltiesOptimise spname 6 penalty 329
+CalcPenaltiesOptimise spname 5
+CalcPenaltiesOptimise spname 5 penalty 18
+CalcPenaltiesOptimise spname 4
+CalcPenaltiesOptimise spname 4 penalty 755
+CalcPenaltiesOptimise spname 3
+CalcPenaltiesOptimise spname 3 penalty 167
+CalcPenaltiesOptimise spname 2
+CalcPenaltiesOptimise spname 2 penalty 825
+CalcPenaltiesOptimise spname 1
+CalcPenaltiesOptimise spname 1 penalty 52
+CalcPenaltiesOptimise end
+after CalcPenaltiesOptimise
+start run loop run 326195520
+before ConnollyInit run 1
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 1
+before ReserveCost run 1
+after ReserveCost run 1
+before ThermalAnnealing run 1
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 1
+before IterativeImprovementOptimise run 1
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 1
+before file output run 1
+after file output run 1
+end run 1
+start run loop run 326195520
+before ConnollyInit run 2
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 2
+before ReserveCost run 2
+after ReserveCost run 2
+before ThermalAnnealing run 2
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 2
+before IterativeImprovementOptimise run 2
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 2
+before file output run 2
+after file output run 2
+end run 2
+start run loop run 326195520
+before ConnollyInit run 3
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 3
+before ReserveCost run 3
+after ReserveCost run 3
+before ThermalAnnealing run 3
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 3
+before IterativeImprovementOptimise run 3
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 3
+before file output run 3
+after file output run 3
+end run 3
+start run loop run 326195520
+before ConnollyInit run 4
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 4
+before ReserveCost run 4
+after ReserveCost run 4
+before ThermalAnnealing run 4
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 4
+before IterativeImprovementOptimise run 4
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 4
+before file output run 4
+after file output run 4
+end run 4
+start run loop run 326195520
+before ConnollyInit run 5
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 5
+before ReserveCost run 5
+after ReserveCost run 5
+before ThermalAnnealing run 5
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 5
+before IterativeImprovementOptimise run 5
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 5
+before file output run 5
+after file output run 5
+end run 5
+start run loop run 326195520
+before ConnollyInit run 6
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 6
+before ReserveCost run 6
+after ReserveCost run 6
+before ThermalAnnealing run 6
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 6
+before IterativeImprovementOptimise run 6
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 6
+before file output run 6
+after file output run 6
+end run 6
+start run loop run 326195520
+before ConnollyInit run 7
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 7
+before ReserveCost run 7
+after ReserveCost run 7
+before ThermalAnnealing run 7
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 7
+before IterativeImprovementOptimise run 7
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 7
+before file output run 7
+after file output run 7
+end run 7
+start run loop run 326195520
+before ConnollyInit run 8
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 8
+before ReserveCost run 8
+after ReserveCost run 8
+before ThermalAnnealing run 8
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 8
+before IterativeImprovementOptimise run 8
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 8
+before file output run 8
+after file output run 8
+end run 8
+start run loop run 326195520
+before ConnollyInit run 9
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 9
+before ReserveCost run 9
+after ReserveCost run 9
+before ThermalAnnealing run 9
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 9
+before IterativeImprovementOptimise run 9
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 9
+before file output run 9
+after file output run 9
+end run 9
+start run loop run 326195520
+before ConnollyInit run 10
+ConnollyInit start
+ConnollyInit end
+after ConnollyInit run 10
+before ReserveCost run 10
+after ReserveCost run 10
+before ThermalAnnealing run 10
+ThermalAnnealing start iterations 1000000
+after ThermalAnnealing run 10
+before IterativeImprovementOptimise run 10
+IterativeImprovementOptimise start
+IterativeImprovementOptimise puvalid 85533
+IterativeImprovementOptimise after array init
+IterativeImprovementOptimise after heapSort_ii
+IterativeImprovementOptimise end
+after IterativeImprovementOptimise run 10
+before file output run 10
+after file output run 10
+end run 10
+before final file output
+Best solution is run 9
+end final file output
+
+Marxan end execution

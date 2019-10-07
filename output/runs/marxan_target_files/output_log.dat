@@ -1,0 +1,145 @@
+        Marxan v 2.43 
+
+   Marine Reserve Design via Annealing
+
+   Coded by Ian Ball, modified by Matthew Watts
+   Written by Ian Ball and Hugh Possingham
+
+ian.ball@aad.gov.au
+h.possingham@uq.edu.au
+m.watts@uq.edu.au
+
+   Marxan website
+
+http://www.uq.edu.au/marxan
+
+
+Entering in the data files 
+   There are 85533 Planning units.
+  85533 Planning Unit names read in 
+  458 species read in 
+  171565 connections entered 
+9810232 conservation values counted, 39174114 big matrix size, 25.0426% density of matrix 
+9810232 conservation values counted, 39174114 big matrix size, 25.0426% density of matrix 
+Time passed so far is 14 secs 
+
+Pre-processing Section. 
+
+Run 1   Using Calculated Tinit = 1519.0000 Tcool = 0.99995186 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8125.0 Cost 8115.0 PUs 8115 Connection 294120000.0 Missing 1 Shortfall 1.00 Penalty 10.0 MPM 0.9
+
+  Iterative Improvement:Value 8007.0 Cost 8007.0 PUs 8007 Connection 290040000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Best:Value 8007.0 Cost 8007.0 PUs 8007 Connection 290040000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  18 mins and 51 secs 
+
+Run 2   Using Calculated Tinit = 1459.0000 Tcool = 0.99995206 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8120.0 Cost 8120.0 PUs 8120 Connection 292720000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8012.0 Cost 8012.0 PUs 8012 Connection 288600000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  18 mins and 58 secs 
+
+Run 3   Using Calculated Tinit = 1449.0000 Tcool = 0.99995210 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8147.0 Cost 8147.0 PUs 8147 Connection 294060000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8034.0 Cost 8034.0 PUs 8034 Connection 289780000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 4 secs 
+
+Run 4   Using Calculated Tinit = 1489.0000 Tcool = 0.99995196 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8121.0 Cost 8121.0 PUs 8121 Connection 291580000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8025.0 Cost 8025.0 PUs 8025 Connection 288100000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 10 secs 
+
+Run 5   Using Calculated Tinit = 1509.0000 Tcool = 0.99995189 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8133.0 Cost 8133.0 PUs 8133 Connection 293620000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8038.0 Cost 8038.0 PUs 8038 Connection 290020000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 17 secs 
+
+Run 6   Using Calculated Tinit = 1469.0000 Tcool = 0.99995203 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8158.0 Cost 8158.0 PUs 8158 Connection 293900000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8052.0 Cost 8052.0 PUs 8052 Connection 289920000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 23 secs 
+
+Run 7   Using Calculated Tinit = 1459.0000 Tcool = 0.99995206 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8117.0 Cost 8117.0 PUs 8117 Connection 292980000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8024.0 Cost 8024.0 PUs 8024 Connection 289540000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 30 secs 
+
+Run 8   Using Calculated Tinit = 1519.0000 Tcool = 0.99995186 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8154.0 Cost 8154.0 PUs 8154 Connection 291820000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8017.0 Cost 8017.0 PUs 8017 Connection 286780000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 36 secs 
+
+Run 9   Using Calculated Tinit = 1539.0000 Tcool = 0.99995179 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8103.0 Cost 8103.0 PUs 8103 Connection 292520000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 7994.0 Cost 7994.0 PUs 7994 Connection 288440000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Best:Value 7994.0 Cost 7994.0 PUs 7994 Connection 288440000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 42 secs 
+
+Run 10   Using Calculated Tinit = 1549.0000 Tcool = 0.99995176 
+  Creating the initial reserve 
+
+  Init:Value 6615860.0 Cost 0.0 PUs 0 Connection 0.0 Missing 458 Shortfall 661586.00 Penalty 6615860.0 MPM 0.0
+
+  ThermalAnnealing:Value 8067.0 Cost 8067.0 PUs 8067 Connection 291580000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+  Iterative Improvement:Value 8001.0 Cost 8001.0 PUs 8001 Connection 289080000.0 Missing 0 Shortfall 0.00 Penalty 0.0 MPM 1.0
+
+Time passed so far is  19 mins and 49 secs 
+
+Best solution is run 9
+Time passed so far is  19 mins and 49 secs 
+
+              The End 
