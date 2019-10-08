@@ -116,6 +116,12 @@ add_legend4 <- function(title, palette, bump = 0, low_high = FALSE,
 #   png(width = 3000, height = 3000, res = 300)
 # 
 # par(mfrow=c(2,2))
+rrT2_df <- as.data.frame(rrT2)
+rrT2_df$prioritizr <- rrT2_df$prioritizr * 100
+rrT2_df$raplecement.cost <- rrT2_df$raplecement.cost * 100
+rrT2_df$rarity.weighted.richness <- rrT2_df$rarity.weighted.richness * 100
+rr_sel <- sapply(rrT2_df, function(x) sum(x > 90, na.rm = TRUE) )
+
 
 #A)
 show_legend <- c(TRUE, FALSE, TRUE, TRUE, TRUE, TRUE)
@@ -125,7 +131,7 @@ legend_head <- c("Selection frequency",
                  "Selection frequency",
                  "Irreplaceability",
                  "Irreplaceability"
-                 )
+)
 
 for(ii in 1:nlayers(abd_plot3)){
   here::here("figures", paste0(names(abd_plot3[[ii]]), ".png")) %>% 
@@ -162,6 +168,10 @@ for(ii in 1:nlayers(abd_plot3)){
   text(x = usr[1] + 0.05 * xwidth, y = usr[3] + 0.95 * yheight,
        labels = names(abd_plot3)[ii], pos = 4, font = 1, cex = 2, col = text_col)
   
+  text(x = usr[1] + 0.05 * xwidth, y = usr[3] + 0.90 * yheight,
+       labels = paste0(">90%: ", as.numeric(rr_sel[ii])), pos = 4, font = 1, cex = 2, col = text_col)
+  
   dev.off()
   
 }
+
