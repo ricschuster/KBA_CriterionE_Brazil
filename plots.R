@@ -74,7 +74,7 @@ names(rrT2) <- c("Marxan",
 crs <- "+proj=moll +lon_0=-90 +x_0=0 +y_0=0 +ellps=WGS84"
 abd_plot3 <- rrT2 %>% 
   stem_to_na() %>% 
-  # projectRaster(crs = crs) %>% 
+  projectRaster(crs = crs, method = 'ngb') %>% 
   #sqrt() %>% 
   stem_crop()
 
