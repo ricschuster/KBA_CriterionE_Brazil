@@ -165,11 +165,11 @@ for(ii in 1:nlayers(abd_plot3)){
        labels = legend_head[ii], pos = 4, font = 1, cex = 1.2, col = text_col)
   
   
-  text(x = usr[1] + 0.05 * xwidth, y = usr[3] + 0.95 * yheight,
-       labels = names(abd_plot3)[ii], pos = 4, font = 1, cex = 2, col = text_col)
+  text(x = usr[1] + 0.01 * xwidth, y = usr[3] + 0.97 * yheight,
+       labels = names(abd_plot3)[ii], pos = 4, font = 1, cex = 3, col = text_col)
   
-  text(x = usr[1] + 0.05 * xwidth, y = usr[3] + 0.90 * yheight,
-       labels = paste0(">90%: ", as.numeric(rr_sel[ii])), pos = 4, font = 1, cex = 2, col = text_col)
+  text(x = usr[1] + 0.01 * xwidth, y = usr[3] + 0.92 * yheight,
+       labels = paste0(">90%: ", as.numeric(rr_sel[ii])), pos = 4, font = 1, cex = 3, col = text_col)
   
   dev.off()
   
